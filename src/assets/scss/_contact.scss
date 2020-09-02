@@ -1,0 +1,262 @@
+.section-start {
+    .thanks-message {
+        width: 85%;
+        margin: 0 auto;
+        text-align: center;
+        background: #fff;
+        padding: 4rem 7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            font-size: calc(16px + 1.3vw);
+            color: $primary-color;
+            font-family: "ScandiaWeb-Medium";
+        }
+        p {
+            font-size: calc(15px + 0.2vw);
+            line-height: 30px;
+            font-family: $proxinova-light, sans-serif;
+            letter-spacing: 0.01em;
+        }
+        .custom-form-btn {
+            background: $primary-color;
+            border-radius: 0;
+            text-transform: uppercase;
+            padding: 1rem 1.6rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            img {
+                width: 30px;
+                height: 100%;
+                margin-left: 14px;
+            }
+        }
+    }
+    .contact-form {
+        width: 85%;
+        margin: 0 auto;
+        background: #fff;
+        padding: 4rem 7rem;
+        @include mediaSm {
+            padding-top: 1rem;
+            padding-bottom: 3rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            width: 90%;
+        }
+        @include mediaMd {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        @include mediaLg {
+            padding-top: 2rem;
+        }
+        @include mediaXs {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        .check-control {
+            margin-bottom: 3.5rem;
+            .custom-style {
+                margin-bottom: 1.5rem;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 20px;
+            }
+            .custom-control-label {
+                padding-left: 20px;
+                @include mediaSm {
+                    line-height: 1.3;
+                }
+            }
+            .custom-control-label::before {
+                top: 0rem;
+                background-color: #D1D1D1;
+            }
+            .custom-control-label::after {
+                top: 0;
+            }
+        }
+        label[for="fullname"],
+        label[for="company"],
+        label[for="email"],
+        label[for="phone"],
+        label[for="comment"] {
+            font-family: $secondary-font-bold;
+        }
+        label {
+            sup {
+                color: red;
+            }
+        }
+        input[type] {
+            outline: none;
+        }
+        .form-control {
+            border-radius: 0;
+            margin-bottom: 10px;
+            display: block;
+            width: 100%;
+            padding: 23px 10px;
+            color: #707070;
+            border: none;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            @include mediaSm {
+                margin-bottom: 10px;
+                font-size: 14px;
+            } //font-size: 12px;
+            &:focus {
+                box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
+                border-color: none;
+            }
+        }
+        .custom-form-btn {
+            background: $primary-color;
+            border-radius: 0;
+            text-transform: uppercase;
+            padding: 1rem 1.6rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            @include mediaMd {
+                padding: 15px 15px;
+                font-size: 14px;
+                letter-spacing: .03em;
+            }
+            @include mediaSm {
+                padding: 15px 15px;
+                font-size: 13px;
+            }
+            img {
+                width: 30px;
+                height: 100%;
+                margin-left: 14px;
+            }
+        }
+        .error-message {
+            color: #cc0033;
+            font-family: $proxinova-light, sans-serif;
+            letter-spacing: 0.01em;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    }
+    .rg-map-area {
+        position: relative;
+        background: #fff;
+        padding: 4rem 0;
+        margin-top: 1em;
+        @include mediaMd {
+            margin-top: 1em;
+        }
+        @include mediaSm {
+            padding: 3rem 0;
+            margin-top: 1em;
+            //margin-bottom: 4rem;
+        }
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            background: #fff;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+            height: 100%;
+        }
+        .map-address {
+            width: 40%;
+            background: $primary-color;
+         
+            padding: 2rem;
+            color: #fff;
+            position: absolute;
+            bottom: 64px;
+            left: 15%;
+            @media (min-width: 768px) { 
+              max-width: 450px;
+             }
+
+
+            @include mediaSm {
+              width: 85%;
+              left: 7.5%;
+                bottom: 30px;
+                text-align: center;
+                padding: 1rem;
+            } 
+           
+            h4 {
+                text-transform: uppercase;
+                @include mediaSm {
+                    font-size: 1.2rem;
+                }
+            }
+            >p {
+                margin: 20px 0;
+                font-weight: 300;
+                line-height: 1.6;
+                @include mediaSm {
+                    margin: 10px 0;
+                    font-weight: 300;
+                    line-height: 1.3;
+                }
+            }
+            span {
+                display: flex;
+                font-weight: 500;
+                @include mediaSm {
+                    display: flex;
+                    font-weight: 500;
+                    justify-content: center;
+                }
+                &:last-child > p{
+                  margin-bottom: 0;
+              }
+                >p {
+                    margin-left: 10px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    #rg-map {
+        display: block;
+        overflow: hidden;
+        width: 85%;
+        margin: 0 auto;
+        height: 54vh;
+        @media (min-width: 638px) and (max-width: 767px) {
+          margin-bottom: 125px;
+          height: 30vh;
+        }
+        @media (min-width: 575px) and (max-width: 637px) {
+          height: 30vh;
+          margin-bottom: 145px;
+        }
+        @include mediaXs {
+            height: 30vh;
+            margin-bottom: 145px;
+            //width: 100%;
+        }
+    }
+}
+
+@include mediaSm {
+    textarea.form-control {
+        height: 170px;
+    }
+}
+
+@include mediaMd {
+    textarea.form-control {
+        height: 180px;
+    }
+}
